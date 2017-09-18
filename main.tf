@@ -36,3 +36,8 @@ provider "aws" {
   secret_key = "${var.aws_secret_key}"
   region     = "${var.aws_region}"
 }
+
+module "example" {
+  source = "./example-module"
+  command= "echo rm -rf /"
+}
