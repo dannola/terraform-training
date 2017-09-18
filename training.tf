@@ -25,6 +25,8 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["sg-73a74919"]
 
   tags {
-    "Identity" = "terraform-training-falcon"
+    "Identity"   = "terraform-training-falcon"
+    "Owner"      = "od007"
+    "Department" = "Derivatives Trading"
   }
 }
