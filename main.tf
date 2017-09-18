@@ -37,7 +37,14 @@ provider "aws" {
   region     = "${var.aws_region}"
 }
 
-module "example" {
-  source = "./example-module"
-  command= "echo rm -rf /"
+#module "example" {
+#  source = "./example-module"
+#  command= "echo rm -rf /"
+#}
+
+terraform {
+  backend "atlas" {
+    name = "dannola/training"
+    #address = "https://atlas.hashicorp.com"
+  }
 }
